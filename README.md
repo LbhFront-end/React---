@@ -1,14 +1,14 @@
 ## React实战项目--评论功能
 
-读[React.js小书](http://huziketang.mangojuice.top/books/react/lesson1)
+读[React.js小书](http://huziketang.mangojuice.top/books/react/lesson1)所做的项目
+[读后笔记](https://github.com/LbhFront-end/About-React)
 
-所做的项目
 
-#### npm install
+### npm install
 
 安装依赖
 
-#### npm start
+### npm start
 
 运行在项目在服务器
 
