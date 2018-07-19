@@ -17,7 +17,7 @@ class CommentInput extends Component {
             content: '',
         }
         this.handleUsernameChange = this.handleUsernameChange.bind(this);
-        this.handleContent = this.handleContent.bind(this);
+        this.handleContentChange  = this.handleContentChange .bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleUsernameBlur = this.handleUsernameBlur.bind(this);
     }
@@ -29,7 +29,7 @@ class CommentInput extends Component {
             this.props.onUserNameInputBlur(e.target.value);
         }
     }
-    handleContent(e) {
+    handleContentChange (e) {
         this.setState({ content: e.target.value });
     }
     handleSubmit() {
@@ -60,7 +60,7 @@ class CommentInput extends Component {
                         <textarea
                             ref={textarea => this.textarea = textarea}
                             value={this.state.content}
-                            onChange={this.handleContent} />
+                            onChange={this.handleContentChange } />
                     </div>
                 </div>
                 <div className='comment-field-button'>
