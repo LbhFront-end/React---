@@ -3,25 +3,22 @@ const INIT_COMMENTS = 'INIT_COMMENTS'
 const ADD_COMMENT = 'ADD_COMMENT'
 const DELETE_COMMENT = 'DELETE_COMMENT'
 
+// reducer
 export default function (state, action) {
     if (!state) {
-        state = {
-            comments: []
-        }
+        state = { comments: [] }
     }
     switch (action.type) {
         case INIT_COMMENTS:
-            //初始化评论
-            return {
-                comments: action.comments
-            }
+            // 初始化评论
+            return { comments: action.comments }
         case ADD_COMMENT:
-            //新增评论
+            // 新增评论
             return {
-                comments: [...state.comments, action.comments]
+                comments: [...state.comments, action.comment]
             }
         case DELETE_COMMENT:
-            //删除评论
+            // 删除评论
             return {
                 comments: [
                     ...state.comments.slice(0, action.commentIndex),
@@ -33,22 +30,15 @@ export default function (state, action) {
     }
 }
 
-//action creators
+// action creators
 export const initComments = (comments) => {
-    return {
-        type: INIT_COMMENTS,
-        comments
-    }
+    return { type: INIT_COMMENTS, comments }
 }
-export const addComments = (comments) => {
-    return {
-        type: ADD_COMMENT,
-        comments
-    }
+
+export const addComment = (comment) => {
+    return { type: ADD_COMMENT, comment }
 }
-export const deleteComments = (comments) => {
-    return {
-        type: DELETE_COMMENT,
-        comments
-    }
+
+export const deleteComment = (commentIndex) => {
+    return { type: DELETE_COMMENT, commentIndex }
 }

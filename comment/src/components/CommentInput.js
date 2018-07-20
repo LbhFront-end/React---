@@ -4,8 +4,8 @@ import PropTypes from 'prop-types'
 class CommentInput extends Component {
     static propTypes = {
         onSubmit: PropTypes.func,
-        username: PropType.any,
-        onUserNameInputBlur: PropType.func
+        username: PropTypes.any,
+        onUserNameInputBlur: PropTypes.func
     }
     static defaultProps = {
         username: ''
